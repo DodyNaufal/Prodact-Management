@@ -1,0 +1,228 @@
+/* Global Style */
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #000; /* Semua teks menjadi hitam */
+  width: 100%;
+}
+
+/* Container Utama */
+.app-container {
+  padding: 2rem; /* Kurangi padding agar lebih full-size */
+  background-color: #f9f9f9;
+  font-family: "Arial", sans-serif;
+  min-height: 100vh; /* Tinggi minimum: seluruh layar */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Mulai dari atas */
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%; /* Lebar penuh */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center; /* Pusatkan di tengah */
+  align-items: center;
+  width: 100%; /* Lebar penuh */
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background-color: #6200ea;
+  color: #ffffff; /* Teks tetap putih untuk kontras */
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #3700b3;
+}
+
+/* Card Style untuk List Produk */
+.product-list,
+.product-input,
+.product-view-container {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Lebar penuh */
+  max-width: 100%; /* Hilangkan batasan maksimal */
+  box-sizing: border-box;
+  color: #000; /* Teks di dalam card menjadi hitam */
+}
+
+.product-list {
+  padding: 1rem;
+  background: linear-gradient(135deg, #5c8daf, #ffffff);
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background-color: #ffffff;
+  margin: 0.5rem 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.product-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Edit */
+.product-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.1);
+  width: 100%; /* Lebar penuh */
+  max-width: 100%; /* Hilangkan batasan maksimal */
+  box-sizing: border-box;
+  color: #000; /* Teks di dalam form menjadi hitam */
+}
+
+.product-edit input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+  color: #000; /* Teks dalam input menjadi hitam */
+}
+
+.product-edit input:focus {
+  border-color: #6200ea;
+  outline: none;
+}
+
+.product-edit button {
+  padding: 0.75rem 1.5rem;
+  background-color: #6200ea;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-edit button:hover {
+  background-color: #3700b3;
+}
+
+/* Input & View */
+.product-input input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #000; /* Teks dalam input menjadi hitam */
+}
+
+.product-input input:focus {
+  border-color: #6200ea;
+  outline: none;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #3700b3;
+  transform: translateY(-2px);
+}
+
+/* Animasi Card */
+.product-list,
+.product-input,
+.product-view-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-view-container {
+  padding: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
